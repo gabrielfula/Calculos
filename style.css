@@ -8,7 +8,6 @@
 
 body {
     background: linear-gradient(#2D0070, #8D49F2);
-    color: #fafafa;
     background-attachment: fixed;
     display: flex;
     align-items: center;
@@ -27,17 +26,21 @@ input {
     padding: 3px;
     outline: none;
     border-bottom: 1px solid #8D49F2;
-    transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out;
+    width: 100%;
 }
 
 div.container {
     width: 50vh;
-    height: 30vh;
-    margin-top: 20vh;
+    height: 50vh;
+    margin-top: 10vh;
     background-color: #fff;
     border-radius: 7px;
     padding: 17px;
     box-shadow: 3px 3px 3px 8px rgba(2, 2, 2, 0.185);
+    display: flex;
+    justify-content: center;
+    
 }
 
 div.container h1 {
@@ -53,3 +56,53 @@ div.container p {
     padding: 10px;
 }
 
+#sinal {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.space-input {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 991px) {
+
+    input {
+        width: 100%;
+    }
+
+    div.space-button {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        width: 60%;
+    }
+
+    div.container {
+        height: 75vh;
+        margin: 20px;
+    }
+
+
+    .container p {
+        display: flex;
+        text-align: initial;
+        margin-top: 20px;
+    }
+
+}
+
+@media (min-width: 720px) {
+     div.container {
+        height: 50vh;
+    }
+}
